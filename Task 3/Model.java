@@ -1,13 +1,30 @@
-
 public class Model {
-    public String getStudentSummary() {
-        String name = "Shayan";
-        int age = 21;
-        double gpa = 3.9;
+    private Student student;
 
-        return "Student Summary:<br>" +
-               "Name: " + name + "<br>" +
-               "Age: " + age + "<br>" +
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+}
+
+class Student {
+    private String name;
+    private int age;
+    private double gpa;
+
+    public Student(String name, int age, double gpa) {
+        this.name = name;
+        this.age = age;
+        this.gpa = gpa;
+    }
+
+    public String getSummary() {
+        return "Student Summary:\n" +
+               "Name: " + name + "\n" +
+               "Age: " + age + "\n" +
                "GPA: " + gpa;
     }
 }
